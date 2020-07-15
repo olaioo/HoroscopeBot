@@ -1,0 +1,372 @@
+{
+  "intents": [
+    {
+      "intent": "busca",
+      "examples": [
+        {
+          "text": "Quero encontrar filmes"
+        },
+        {
+          "text": "Quero buscar alguns filmes"
+        },
+        {
+          "text": "Quero procurar filmes"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "saudacao",
+      "examples": [
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "Olá"
+        },
+        {
+          "text": "Tudo bem"
+        },
+        {
+          "text": "Boa tarde"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "finalizacao",
+      "examples": [
+        {
+          "text": "Adeus"
+        },
+        {
+          "text": "Até logo"
+        },
+        {
+          "text": "Um abraço"
+        },
+        {
+          "text": "Até mais"
+        },
+        {
+          "text": "Tchau"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "trendings",
+      "examples": [
+        {
+          "text": "O que está bombando?"
+        },
+        {
+          "text": "Quais os trendings?"
+        },
+        {
+          "text": "Quais as tendências?"
+        },
+        {
+          "text": "Quais os melhores filmes"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "periodo",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "dia",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "semana",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Os filmes encontrados são: $resposta"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1594677136097",
+      "context": {
+        "periodo": null
+      },
+      "conditions": "true",
+      "dialog_node": "node_3_1594677663630",
+      "previous_sibling": "slot_10_1594677959812"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1594677136097",
+      "variable": "$periodo",
+      "dialog_node": "slot_10_1594677959812"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Os filmes encontrados são $resposta"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1594681785092",
+      "conditions": "true",
+      "dialog_node": "node_3_1594682071373"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1594681765874",
+      "actions": [
+        {
+          "name": "search",
+          "type": "client",
+          "parameters": {
+            "termo": "<? input.text ?>"
+          },
+          "result_variable": "resposta"
+        }
+      ],
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "true",
+      "dialog_node": "node_8_1594681785092"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Qual o período que você quer ver as tendências? Você pode escolher entre dia e semana"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1594677959812",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1594677959833",
+      "previous_sibling": "handler_9_1594677959833"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1594677959812",
+      "context": {
+        "periodo": "@periodo"
+      },
+      "conditions": "@periodo",
+      "event_name": "input",
+      "dialog_node": "handler_9_1594677959833"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "name": "trendings",
+          "type": "client",
+          "parameters": {
+            "periodo": "$periodo"
+          },
+          "result_variable": "resposta"
+        }
+      ],
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#trendings",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_10_1594677136097",
+      "previous_sibling": "node_10_1594668898251"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Digite o termo de busca"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#busca",
+      "dialog_node": "node_4_1594681765874",
+      "previous_sibling": "node_10_1594677136097"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_2_1594689965206",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Oi"
+              },
+              {
+                "text": "Olá"
+              },
+              {
+                "text": "Oi, tudo bem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#saudacao",
+      "dialog_node": "node_10_1594668898251",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tchau"
+              },
+              {
+                "text": "Até logo"
+              },
+              {
+                "text": "Até breve"
+              },
+              {
+                "text": "Adeus"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#finalizacao",
+      "dialog_node": "node_2_1594689965206",
+      "previous_sibling": "node_4_1594681765874"
+    },
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá. Como posso te ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "MovieBot",
+  "language": "pt-br",
+  "description": ""
+}
