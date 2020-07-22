@@ -1,5 +1,4 @@
-from telegram import Bot
-from telegram.ext import Dispatcher, CommandHandler, MessageHandler, Filters
+from telegram.ext import Updater, Dispatcher, CommandHandler, MessageHandler, Filters
 from session_manager import SessionManager
 from io import BytesIO
 from queue import Queue
@@ -7,6 +6,7 @@ from threading import Thread
 import configparser
 import assistant
 import voice
+import os
 
 
 import logging
@@ -19,34 +19,24 @@ logger = logging.getLogger('TelegramBot')
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-bot = Bot(config['TELEGRAM']['BOT_TOKEN'])
 
 def setup():
 
-    #configura o bot no telegram para responder ao webhook
-    #aqui os updates sao processados atraves de uma fila
-    update_queue = Queue()
-    dispatcher = Dispatcher(bot, update_queue, use_context=True)
+    TOKEN = config['TELEGRAM']['BOT_TOKEN']
+    PORT = int(os.environ.get('PORT', '8443'))
 
-    #registra handlers no dispatcher
-    start_handler = CommandHandler('start', start)
-    dispatcher.add_handler(start_handler)
+    updater = Updater(TOKEN)
+    dispatcher = updater.dispatcher
 
-    message_handler = MessageHandler(Filters.text, message)
-    dispatcher.add_handler(message_handler)
-
-    voice_handler = MessageHandler(Filters.voice, receive_voice)
-    dispatcher.add_handler(voice_handler)
+    updater.start_webhook(listen='0.0.0.0',
+                          port=PORT,
+                          url_path=TOKEN)
 
     #configura webhook
-    bot.set_webhook(config['TELEGRAM']['WEBHOOK_URL'] + '/' + config['TELEGRAM']['BOT_TOKEN'])
+    updater.bot.set_webhook(config['TELEGRAM']['WEBHOOK_URL'] + '/' + config['TELEGRAM']['BOT_TOKEN'])
+    updater.idle()
 
-    #inicia uma thread separada so para gerenciar a fila
-    #isso evita de travar a execucao principal enquanto a fila eh processada
-    thread = Thread(target=dispatcher.start, name='dispatcher')
-    thread.start()
-
-    return (update_queue, dispatcher, bot)
+    return (updater, dispatcher)
 
 def start(update, context):
     assistant.validate_session(update.effective_chat.id)
