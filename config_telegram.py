@@ -11,23 +11,24 @@ import os
 
 import logging
 
+#Variaveis de ambiente de configuracao
+TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+PORT = int(os.environ.get('PORT', '8443'))
+WEBHOOK_URL = os.environ.get('TELEGRAM_WEBHOOK')
+
 #configura logging e config
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
 logger = logging.getLogger('TelegramBot')
 
 
-
-
 def setup():
 
-    TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
-    PORT = int(os.environ.get('PORT', '8443'))
-    WEBHOOK_URL = os.environ.get('TELEGRAM_WEBHOOK')
-
+    #cria updater e dispatcher
     updater = Updater(TOKEN, use_context=True)
     dispatcher = updater.dispatcher
 
+    #define handlers
     start_handler = CommandHandler('start', start)
     dispatcher.add_handler(start_handler)
 
@@ -37,12 +38,17 @@ def setup():
     voice_handler = MessageHandler(Filters.voice, receive_voice)
     dispatcher.add_handler(voice_handler)
 
+    #inicia webhook com a porta configurada pelo heroku
+    #o heroku cuida automaticamente do proxy reverso, portanto a porta deve ser a fornecida pelo heroku
+    #nas variáveis de ambiente
     updater.start_webhook(listen='0.0.0.0',
                           port=PORT,
                           url_path=TOKEN)
 
     #configura webhook
     updater.bot.set_webhook(WEBHOOK_URL + '/' + TOKEN)
+
+    #para a aplicacao nao terminar, eh necessario chamar o idle para que ela fique sempre rodando
     updater.idle()
 
     return (updater, dispatcher)
