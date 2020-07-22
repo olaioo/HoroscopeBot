@@ -25,7 +25,7 @@ def setup():
     PORT = int(os.environ.get('PORT', '8443'))
     WEBHOOK_URL = os.environ.get('TELEGRAM_WEBHOOK')
 
-    updater = Updater(TOKEN)
+    updater = Updater(TOKEN, use_context=True)
     dispatcher = updater.dispatcher
 
     updater.start_webhook(listen='0.0.0.0',
