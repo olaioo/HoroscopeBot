@@ -28,6 +28,15 @@ def setup():
     updater = Updater(TOKEN, use_context=True)
     dispatcher = updater.dispatcher
 
+    start_handler = CommandHandler('start', start)
+    dispatcher.add_handler(start_handler)
+
+    message_handler = MessageHandler(Filters.text, message)
+    dispatcher.add_handler(message_handler)
+
+    voice_handler = MessageHandler(Filters.voice, receive_voice)
+    dispatcher.add_handler(voice_handler)
+
     updater.start_webhook(listen='0.0.0.0',
                           port=PORT,
                           url_path=TOKEN)
