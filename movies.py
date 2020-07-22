@@ -1,11 +1,10 @@
 import requests
-import configparser
+import os
 
-config = configparser.ConfigParser()
-config.read('config.ini')
+
 
 base_url = 'https://api.themoviedb.org/3'
-api_key = config['TMDB']['API_KEY']
+api_key = os.environ.get('TMDB_KEY')
 
 
 def get_trendings(is_day):

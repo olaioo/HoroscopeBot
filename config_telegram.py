@@ -3,7 +3,7 @@ from session_manager import SessionManager
 from io import BytesIO
 from queue import Queue
 from threading import Thread
-import configparser
+import os
 import assistant
 import voice
 import os
@@ -16,14 +16,14 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.INFO)
 logger = logging.getLogger('TelegramBot')
 
-config = configparser.ConfigParser()
-config.read('config.ini')
+
 
 
 def setup():
 
-    TOKEN = config['TELEGRAM']['BOT_TOKEN']
+    TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
     PORT = int(os.environ.get('PORT', '8443'))
+    WEBHOOK_URL = os.environ.get('TELEGRAM_WEBHOOK')
 
     updater = Updater(TOKEN)
     dispatcher = updater.dispatcher
@@ -33,7 +33,7 @@ def setup():
                           url_path=TOKEN)
 
     #configura webhook
-    updater.bot.set_webhook(config['TELEGRAM']['WEBHOOK_URL'] + '/' + config['TELEGRAM']['BOT_TOKEN'])
+    updater.bot.set_webhook(WEBHOOK_URL + '/' + TOKEN)
     updater.idle()
 
     return (updater, dispatcher)
