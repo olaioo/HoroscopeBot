@@ -1,5 +1,5 @@
 import horoscope_services
-
+import translator
 
 def action_handler(action, parameters, return_var):
     return_values = {}
@@ -17,6 +17,10 @@ def get_horoscope(parameters, return_var):
     sign = parameters['signo']
     scope = parameters['escopo']
 
+    response_text = horoscope_services.get_horoscope(sign, scope)
+
+    translated = translator.translate(text=response_text)
+
     return {
-        return_var: horoscope_services.get_horoscope(sign, scope)
+        return_var: translated
     }
