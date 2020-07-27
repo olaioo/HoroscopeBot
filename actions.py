@@ -18,5 +18,5 @@ def get_horoscope(parameters, return_var):
     scope = parameters['escopo']
 
     return {
-        return_var: horoscope_services.get_horoscope(sign, scope) 
+        return_var: '' + horoscope_services.get_horoscope(sign, scope) 
     }
