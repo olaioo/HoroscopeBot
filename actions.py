@@ -17,6 +17,8 @@ def get_horoscope(parameters, return_var):
     sign = parameters['signo']
     scope = parameters['escopo']
 
+    res = horoscope_services.get_horoscope(sign, scope)
+
     return {
-        return_var: '' + horoscope_services.get_horoscope(sign, scope) 
+        return_var: "teste" 
     }
