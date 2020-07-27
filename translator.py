@@ -14,4 +14,4 @@ language_translator = LanguageTranslatorV3(
 language_translator.set_service_url(TRANSLATOR_URL)
 
 def translate(text):
-    return language_translator.translate(text=text, model_id='pt-en').get_result()['translations'][0]['translation']
+    return language_translator.translate(text=text, model_id='en-pt').get_result()['translations'][0]['translation']
