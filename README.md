@@ -15,3 +15,5 @@ A seguir as variáveis que devem ser configuradas no Heroku:
 * T2S_URL: URL da API Watson TExtToSpeech
 * TELEGRAM_BOT_TOKEN: token do bot criado no Telegram
 * TELEGRAM_WEBHOOK: url da aplicação do heroku (https://\<appname\>.herokuapp.com)
+* WATSON_TRANSLATOR_TOKEN: token IAM do Watson Translator
+* WATSON_TRANSLATOR_URL: URL do Watson Translator
