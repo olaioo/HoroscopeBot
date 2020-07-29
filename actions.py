@@ -5,8 +5,10 @@ def action_handler(action, parameters, return_var):
     return_values = {}
     if action == 'previsao':
         return_values = get_horoscope(parameters, return_var)
-    if action == 'combinar':
+    elif action == 'combinar':
         return_values = get_percentage(parameters, return_var)
+    elif action == 'descobrir_signo':
+        return_values = get_sign(parameters, return_var)
     return {
             'skills': {
                 'main skill': {
@@ -35,6 +37,17 @@ def get_percentage(parameters, return_var):
 
     translated = translator.translate(text=response_text)
     
+    return {
+        return_var: translated
+    }
+
+def get_sign(parameters, return_var):
+    date = parameters['date']
+
+    response_text = horoscope_services.get_sign(date)
+
+    translated = translator.translate(text=response_text)
+
     return {
         return_var: translated
     }
