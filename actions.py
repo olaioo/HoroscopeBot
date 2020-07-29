@@ -5,6 +5,8 @@ def action_handler(action, parameters, return_var):
     return_values = {}
     if action == 'previsao':
         return_values = get_horoscope(parameters, return_var)
+    if action == 'combinar':
+        return_values = get_percentage(parameters, return_var)
     return {
             'skills': {
                 'main skill': {
