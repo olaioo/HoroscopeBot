@@ -24,3 +24,15 @@ def get_horoscope(parameters, return_var):
     return {
         return_var: translated
     }
+
+def get_percentage(parameters, return_var):
+    fname = parameters['fname']
+    sname = parameters['sname']
+
+    response_text = horoscope_services.get_percentage(fname, sname)
+
+    translated = translator.translate(text=response_text)
+    
+    return {
+        return_var: translated
+    }
