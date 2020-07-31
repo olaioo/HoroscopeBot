@@ -1,2 +1,3 @@
 ibm-watson
 python-telegram-bot
+googletrans
