@@ -2,9 +2,9 @@
 
 Chatbot de consulta de horoscopo no telegram. Utiliza o Watson Assistant como gerenciador e as seguintes API's:
 
-Horoscope API (https://tapasweni-pathak.github.io/Horoscope-API/)
-Love Calculator (https://rapidapi.com/ajith/api/love-calculator/)
-Zodiac Sign (https://rapidapi.com/hajderr/api/zodiac-sign)
+* Horoscope API (https://tapasweni-pathak.github.io/Horoscope-API/)
+* Love Calculator (https://rapidapi.com/ajith/api/love-calculator/)
+* Zodiac Sign (https://rapidapi.com/hajderr/api/zodiac-sign)
 
 ## Configurações
 
