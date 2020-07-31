@@ -23,7 +23,7 @@ def get_horoscope(parameters, return_var):
 
     response_text = horoscope_services.get_horoscope(sign, scope)
 
-    translated = translator.translate(text=response_text)
+    translated = translator.translate(response_text)
 
     return {
         return_var: translated
@@ -35,7 +35,7 @@ def get_percentage(parameters, return_var):
 
     response_text = horoscope_services.get_percentage(fname, sname)
 
-    translated = translator.translate(text=response_text)
+    translated = translator.translate(response_text)
     
     return {
         return_var: translated
@@ -46,7 +46,7 @@ def get_sign(parameters, return_var):
 
     response_text = horoscope_services.get_sign(date)
 
-    translated = translator.translate(text=response_text)
+    translated = translator.translate(response_text)
 
     return {
         return_var: translated
