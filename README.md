@@ -12,10 +12,10 @@ O HoroscopeBot descobre seu signo pela data de nascimento, entrega horóscopo di
 
 ## Instalação
 
-Carregue a skill para o Watson Assistant localizado na raíz do projeto com o nome 'skill-HoroscopoChatBot.json', em seguida defina ela como skill padrão. 
+Carregue a skill para o Watson Assistant localizada na raíz do projeto com o nome 'skill-HoroscopoChatBot.json', em seguida defina ela como skill padrão. 
 
 
-Para a aplicação, basta clonar ou realizar um fork do repositório e conectar sua conta do github no heroku, adiciona as configuções da seção abaixo e em seguida realizar o deploy da aplicação no próprio heroku.
+Para a aplicação, basta clonar ou realizar um fork do repositório e conectar sua conta do github no heroku, adicionar as configurações da seção abaixo e em seguida realizar o deploy da aplicação no próprio heroku.
 
 ## Configurações
 
