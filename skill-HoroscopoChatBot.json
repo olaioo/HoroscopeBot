@@ -1,0 +1,1087 @@
+{
+  "intents": [
+    {
+      "intent": "descobrir_signo",
+      "examples": [
+        {
+          "text": "Qual é o meu signo?"
+        },
+        {
+          "text": "Quero saber meu signo"
+        },
+        {
+          "text": "Quero saber qual é o meu signo"
+        },
+        {
+          "text": "Como descubro meu signo?"
+        },
+        {
+          "text": "Quero descobrir meu signo"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "combinacao",
+      "examples": [
+        {
+          "text": "Quero saber a afinidade de dois nomes"
+        },
+        {
+          "text": "Quero medir a afinidade entre duas pessoas"
+        },
+        {
+          "text": "Quero saber a afinidade de duas pessoas"
+        },
+        {
+          "text": "Quero a combinação entre dois nomes"
+        },
+        {
+          "text": "Quero saber a combinação entre duas pessoas"
+        },
+        {
+          "text": "Quero medir a afinidade entre dois nomes"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "finalizacao",
+      "examples": [
+        {
+          "text": "Tchau"
+        },
+        {
+          "text": "Até mais"
+        },
+        {
+          "text": "Até logo"
+        },
+        {
+          "text": "Até"
+        },
+        {
+          "text": "Até breve"
+        },
+        {
+          "text": "Abraço"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "saudacao",
+      "examples": [
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "Boa tarde"
+        },
+        {
+          "text": "Boa noite"
+        },
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "Ola"
+        },
+        {
+          "text": "Tudo bem"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "previsao",
+      "examples": [
+        {
+          "text": "Como será"
+        },
+        {
+          "text": "Qual é a sugestão de horóscopo"
+        },
+        {
+          "text": "Qual meu horóscopo"
+        },
+        {
+          "text": "Quero meu horóscopo"
+        },
+        {
+          "text": "Quero saber meu horóscopo"
+        },
+        {
+          "text": "Quero saber o horóscopo"
+        },
+        {
+          "text": "Qual horóscopo"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "cancelamento",
+      "examples": [
+        {
+          "text": "Cancelar"
+        },
+        {
+          "text": "Quero sair"
+        },
+        {
+          "text": "Sair"
+        },
+        {
+          "text": "Quero cancelar"
+        },
+        {
+          "text": "Não quero mais"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "signo",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "capricorn",
+          "synonyms": [
+            "capricórnio",
+            "capricorniano",
+            "capricorniana"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "libra",
+          "synonyms": [
+            "libra",
+            "libriano",
+            "libriana"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "taurus",
+          "synonyms": [
+            "touro",
+            "taurino",
+            "taurina"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "scorpio",
+          "synonyms": [
+            "escorpião",
+            "escorpiano",
+            "escorpiana"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "sagittarius",
+          "synonyms": [
+            "sargitário",
+            "sargitariano",
+            "sargitariana"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "aquarius",
+          "synonyms": [
+            "aquário",
+            "aquariano",
+            "aquariana"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "aries",
+          "synonyms": [
+            "áries",
+            "ariano",
+            "ariana"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "pisces",
+          "synonyms": [
+            "peixes",
+            "pisciano",
+            "pisciana"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "gemini",
+          "synonyms": [
+            "gêmeos",
+            "geminiano",
+            "geminiana"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cancer",
+          "synonyms": [
+            "câncer",
+            "canceriano",
+            "canceriana"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "leo",
+          "synonyms": [
+            "leão",
+            "leonino",
+            "leonina"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "virgo",
+          "synonyms": [
+            "virgem",
+            "virginiano",
+            "virginiana"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "escopo",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "week",
+          "synonyms": [
+            "semana",
+            "semanal"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "today",
+          "synonyms": [
+            "hoje",
+            "diário",
+            "dia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "month",
+          "synonyms": [
+            "mês",
+            "mensal"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$resposta"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1595880421180",
+      "context": {
+        "signo": null,
+        "escopo": null,
+        "cancelou": null
+      },
+      "disabled": true,
+      "conditions": "true",
+      "dialog_node": "response_2_1596209192480"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Qual é o período que deseja? (Diário, Semanal ou Mensal)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1595598776120",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1595598776198",
+      "previous_sibling": "handler_7_1595598776198"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1595598776120",
+      "context": {
+        "escopo": "@escopo"
+      },
+      "conditions": "@escopo",
+      "event_name": "input",
+      "dialog_node": "handler_7_1595598776198"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Boa noite. Como posso te ajudar? Faço sugestões de horóscopo, afinidade por nomes e descubro qual é o seu signo solar."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1595598337863",
+      "conditions": "true",
+      "dialog_node": "response_8_1595598612547",
+      "previous_sibling": "response_8_1595598602630"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Boa tarde. Como posso te ajudar? Faço sugestões de horóscopo, afinidade por nomes e descubro qual é o seu signo solar."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1595598337863",
+      "conditions": "now().before(\"18:00:00\")",
+      "dialog_node": "response_8_1595598602630",
+      "previous_sibling": "response_1_1595598583141"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bom dia. Como posso te ajudar? Faço sugestões de horóscopo, afinidade por nomes e descubro qual é o seu signo solar."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1595598337863",
+      "context": {},
+      "conditions": "now().before(\"12:00:00\")",
+      "dialog_node": "response_1_1595598583141"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Qual sua data de nascimento?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1596043074582",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1596043074648",
+      "previous_sibling": "handler_1_1596043074648"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1596043074582",
+      "context": {
+        "date": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_1_1596043074648"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Qual é o signo desejado?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1595600330522",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1595600330532",
+      "previous_sibling": "handler_5_1595600330532"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1595600330522",
+      "context": {
+        "signo": "@signo"
+      },
+      "conditions": "@signo",
+      "event_name": "input",
+      "dialog_node": "handler_5_1595600330532"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Qual o nome da primeira pessoa?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1596032721537",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1596032721591",
+      "previous_sibling": "handler_6_1596032721591"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1596032721537",
+      "context": {
+        "cancelou": true
+      },
+      "conditions": "#cancelamento",
+      "event_name": "filled",
+      "dialog_node": "handler_10_1596384022085",
+      "previous_sibling": "handler_9_1596032721591"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1596032721537",
+      "context": {
+        "fname": "input.text"
+      },
+      "conditions": "input.text",
+      "event_name": "input",
+      "dialog_node": "handler_6_1596032721591"
+    },
+    {
+      "type": "frame",
+      "title": "1º nome",
+      "parent": "node_7_1596032271723",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "!$cancelou",
+      "dialog_node": "node_7_1596032297725"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<?$resposta?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1596034593662",
+      "conditions": "!$cancelou",
+      "dialog_node": "node_1_1596034807893"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1596032987894",
+      "context": {
+        "cancelou": true
+      },
+      "conditions": "#cancelamento",
+      "event_name": "filled",
+      "dialog_node": "handler_4_1596384242048",
+      "previous_sibling": "handler_4_1596032987920"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Qual o nome da segunda pessoa?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_3_1596032987894",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1596032987920",
+      "previous_sibling": "handler_9_1596032987920"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1596032987894",
+      "context": {
+        "sname": "input.text"
+      },
+      "conditions": "input.text",
+      "event_name": "input",
+      "dialog_node": "handler_9_1596032987920"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$resposta"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1596384551814",
+      "context": {
+        "signo": null,
+        "escopo": null
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "!$cancelou",
+      "dialog_node": "node_1_1595880421180"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1596043052805",
+      "variable": "$date",
+      "dialog_node": "slot_8_1596043074582",
+      "previous_sibling": "node_1_1596386140084"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1596043052805",
+      "actions": [
+        {
+          "name": "descobrir_signo",
+          "type": "client",
+          "parameters": {
+            "date": "$date"
+          },
+          "result_variable": "resposta"
+        }
+      ],
+      "context": {},
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "!$cancelou",
+      "dialog_node": "node_8_1596386028397",
+      "previous_sibling": "handler_4_1596382496097"
+    },
+    {
+      "type": "standard",
+      "parent": "node_6_1596043052805",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1596379902826"
+      },
+      "conditions": "$cancelou",
+      "dialog_node": "node_1_1596386140084",
+      "previous_sibling": "node_8_1596386028397"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "node_6_1596043052805",
+      "context": {
+        "cancelou": true
+      },
+      "next_step": {
+        "behavior": "skip_all_slots"
+      },
+      "conditions": "#cancelamento",
+      "event_name": "generic",
+      "dialog_node": "handler_4_1596382496097"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Seu signo solar é <?$resposta?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1596386028397",
+      "context": {
+        "date": null
+      },
+      "conditions": "!$cancelou",
+      "dialog_node": "node_3_1596382061081"
+    },
+    {
+      "type": "frame",
+      "title": "2º nome",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_7_1596032297725",
+      "context": {
+        "sname": "<? input.text ?>"
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "!$cancelou",
+      "dialog_node": "node_6_1596032949760",
+      "previous_sibling": "response_7_1596396317576"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_7_1596032297725",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1596379902826"
+      },
+      "conditions": "$cancelou",
+      "dialog_node": "response_7_1596396317576",
+      "previous_sibling": "response_2_1596396149721"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_7_1596032297725",
+      "variable": "fname",
+      "dialog_node": "slot_6_1596032721537",
+      "previous_sibling": "node_6_1596032949760"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual o nome da segunda pessoa?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1596032297725",
+      "context": {
+        "fname": "<? input.text ?>"
+      },
+      "conditions": "!$cancelou",
+      "dialog_node": "response_2_1596396149721"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1595598670006",
+      "actions": [
+        {
+          "name": "previsao",
+          "type": "client",
+          "parameters": {
+            "signo": "$signo",
+            "escopo": "$escopo"
+          },
+          "result_variable": "resposta"
+        }
+      ],
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "!$cancelou",
+      "dialog_node": "node_6_1596384551814",
+      "previous_sibling": "handler_7_1596384968720"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_2_1595598670006",
+      "variable": "$signo",
+      "dialog_node": "slot_4_1595600330522",
+      "previous_sibling": "slot_9_1595598776120"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Estou buscando seu horoscopo, para <?$escopo?> e signo <?$signo?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1595598670006",
+      "disabled": true,
+      "conditions": "$escopo && $signo",
+      "dialog_node": "response_7_1595599534109",
+      "previous_sibling": "node_8_1596385602197"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_2_1595598670006",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1596379902826"
+      },
+      "conditions": "$cancelou",
+      "dialog_node": "node_8_1596385602197",
+      "previous_sibling": "node_6_1596384551814"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_2_1595598670006",
+      "variable": "$escopo",
+      "dialog_node": "slot_9_1595598776120",
+      "previous_sibling": "response_7_1595599534109"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "node_2_1595598670006",
+      "context": {
+        "cancelou": true
+      },
+      "next_step": {
+        "behavior": "skip_all_slots"
+      },
+      "conditions": "#cancelamento",
+      "event_name": "generic",
+      "dialog_node": "handler_7_1596384968720"
+    },
+    {
+      "type": "standard",
+      "parent": "node_6_1596032949760",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1596379902826"
+      },
+      "conditions": "$cancelou",
+      "dialog_node": "node_1_1596396278140",
+      "previous_sibling": "node_10_1596034593662"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1596032949760",
+      "variable": "sname",
+      "dialog_node": "slot_3_1596032987894",
+      "previous_sibling": "node_1_1596396278140"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1596032949760",
+      "actions": [
+        {
+          "name": "combinar",
+          "type": "client",
+          "parameters": {
+            "fname": "$fname",
+            "sname": "$sname"
+          },
+          "result_variable": "resposta"
+        }
+      ],
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "!$cancelou",
+      "dialog_node": "node_10_1596034593662"
+    },
+    {
+      "type": "standard",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#saudacao",
+      "dialog_node": "node_1_1595598337863",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": []
+      },
+      "context": {},
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#descobrir_signo",
+      "dialog_node": "node_6_1596043052805",
+      "previous_sibling": "node_1_1595598337863"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tchau."
+              },
+              {
+                "text": "Até logo."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#finalizacao",
+      "dialog_node": "node_4_1595598642611",
+      "previous_sibling": "node_7_1596032271723"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_2_1596379902826",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#previsao",
+      "dialog_node": "node_2_1595598670006",
+      "previous_sibling": "node_6_1596043052805"
+    },
+    {
+      "type": "standard",
+      "title": "Cancelando",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Desculpe. Deseja algo mais?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "date": null,
+        "fname": null,
+        "signo": null,
+        "sname": null,
+        "escopo": null,
+        "cancelou": null
+      },
+      "conditions": "anything_else && $cancelou",
+      "dialog_node": "node_2_1596379902826",
+      "previous_sibling": "node_4_1595598642611"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual o nome da primeira pessoa?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "fname": null,
+        "sname": null
+      },
+      "conditions": "#combinacao",
+      "dialog_node": "node_7_1596032271723",
+      "previous_sibling": "node_2_1595598670006"
+    },
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá. Como posso te ajudar? Faço sugestões de horóscopo, afinidade por nomes e descubro qual é o seu signo solar."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "HoroscopoChatBot",
+  "language": "pt-br",
+  "description": ""
+}

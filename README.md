@@ -6,6 +6,17 @@ Chatbot de consulta de horoscopo no telegram. Utiliza o Watson Assistant como ge
 * Love Calculator (https://rapidapi.com/ajith/api/love-calculator/)
 * Zodiac Sign (https://rapidapi.com/hajderr/api/zodiac-sign)
 
+## Funcionalidades
+
+O HoroscopeBot descobre seu signo pela data de nascimento, entrega horóscopo diário, semanal e mensal. Também determina a afinidade entre duas pessoas pelo seus nomes. Consegue interagir tanto por texto, quanto por mensagem de áudio.
+
+## Instalação
+
+Carregue a skill para o Watson Assistant localizado na raíz do projeto com o nome 'skill-HoroscopoChatBot.json', em seguida defina ela como skill padrão. 
+
+
+Para a aplicação, basta clonar ou realizar um fork do repositório e conectar sua conta do github no heroku, adiciona as configuções da seção abaixo e em seguida realizar o deploy da aplicação no próprio heroku.
+
 ## Configurações
 
 A seguir as variáveis que devem ser configuradas no Heroku:
