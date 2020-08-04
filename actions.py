@@ -49,5 +49,5 @@ def get_sign(parameters, return_var):
     translated = translator.translate(response_text)
 
     return {
-        return_var: translated
+        return_var: "Leão" if translated == "Leo" else translated
     }
