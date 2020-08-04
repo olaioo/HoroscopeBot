@@ -12,6 +12,14 @@ O HoroscopeBot descobre seu signo pela data de nascimento, entrega horóscopo di
 
 ## Instalação
 
+Requisitos necessários para efetuar a instalação são:
+
+* Possuir os serviços da IBM: Watson Assistant, Watson SpeechToText e Watson TextToSpeech
+* Bot no Telegram
+* Conta no Heroku
+* Conta no RapidAPI
+
+
 Carregue a skill para o Watson Assistant localizada na raíz do projeto com o nome 'skill-HoroscopoChatBot.json', em seguida defina ela como skill padrão. 
 
 
@@ -31,3 +39,7 @@ A seguir as variáveis que devem ser configuradas no Heroku:
 * TELEGRAM_BOT_TOKEN: token do bot criado no Telegram
 * TELEGRAM_WEBHOOK: url da aplicação do heroku (https://\<appname\>.herokuapp.com)
 * RAPIDAPI_KEY: token para acessar as API's lovecalculator e zodiacsign, adquirido em (https://rapidapi.com/)
+
+## Demonstração
+
+O HoroscopeBot está online e pode ser acessado pelo telegram, basta adicioná-lo pelo usename @IA3Chatbot
