@@ -42,4 +42,4 @@ A seguir as variáveis que devem ser configuradas no Heroku:
 
 ## Demonstração
 
-O HoroscopeBot está online e pode ser acessado pelo telegram, basta adicioná-lo pelo usename @IA3Chatbot
+O HoroscopeBot está online e pode ser acessado pelo telegram, basta adicioná-lo pelo username @IA3Chatbot
