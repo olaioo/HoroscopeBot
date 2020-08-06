@@ -43,3 +43,11 @@ A seguir as variáveis que devem ser configuradas no Heroku:
 ## Demonstração
 
 O HoroscopeBot está online e pode ser acessado pelo telegram, basta adicioná-lo pelo username [@IA3Chatbot](https://t.me/IA3Chatbot)
+
+Exemplos de perguntas:
+
+* Quero descobrir o meu signo, nasci em 05/06/1998.
+* Qual é o horoscopo diário para peixes?
+* Quero saber a afinidade entre duas pessoas
+  * João
+  * Maria
