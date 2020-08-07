@@ -388,7 +388,7 @@
         ]
       },
       "parent": "node_1_1595598337863",
-      "conditions": "now().before(\"18:00:00\")",
+      "conditions": "now().before(\"21:00:00\")",
       "dialog_node": "response_8_1595598602630",
       "previous_sibling": "response_1_1595598583141"
     },
@@ -409,7 +409,7 @@
       },
       "parent": "node_1_1595598337863",
       "context": {},
-      "conditions": "now().before(\"12:00:00\")",
+      "conditions": "now().before(\"15:00:00\")",
       "dialog_node": "response_1_1595598583141"
     },
     {
@@ -893,6 +893,7 @@
     },
     {
       "type": "standard",
+      "title": "Saudação com horário +3h pra compensar o horário do servidor do heroku",
       "metadata": {
         "_customization": {
           "mcr": true
