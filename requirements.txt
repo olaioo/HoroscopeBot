@@ -1,3 +1,3 @@
 ibm-watson
 python-telegram-bot
-googletrans>=3.1.0a0
+googletrans==3.1.0a0
