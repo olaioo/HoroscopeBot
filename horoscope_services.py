@@ -12,9 +12,9 @@ def get_horoscope(sign, scope):
     return response['horoscope']
 
 def get_percentage(fname, sname):
-    response = requests.get(base_url_lovecalculator + '/getPercentage', {'fname': fname, 'sname': sname}, headers={'x-rapidapi-key': key_rapidapi, 'x-rapidapi-host': base_url_lovecalculator.replace('https://','')}).json()
+    response = requests.get(base_url_lovecalculator + '/getPercentage', {'fname': fname, 'sname': sname}, headers={'x-rapidapi-key': key_rapidapi}).json()
     return response['result'] + " " + response['percentage'] + '%'
 
 def get_sign(date):
-    response = requests.get(base_url_zodiacsign + '/sign', {'date': date}, headers={'x-rapidapi-key': key_rapidapi, 'x-rapidapi-host': base_url_horoscope.replace('https://','')})
+    response = requests.get(base_url_zodiacsign + '/sign', {'date': date}, headers={'x-rapidapi-key': key_rapidapi})
     return response.text
