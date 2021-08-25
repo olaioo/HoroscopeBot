@@ -43,10 +43,8 @@ def setup():
     #nas variáveis de ambiente
     updater.start_webhook(listen='0.0.0.0',
                           port=PORT,
-                          url_path=TOKEN)
-
-    #configura webhook
-    updater.bot.set_webhook(WEBHOOK_URL + '/' + TOKEN)
+                          url_path=TOKEN,
+                          webhook_url=WEBHOOK_URL + TOKEN)
 
     #para a aplicacao nao terminar, eh necessario chamar o idle para que ela fique sempre rodando
     updater.idle()
