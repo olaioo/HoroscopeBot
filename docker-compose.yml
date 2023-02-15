@@ -1,0 +1,16 @@
+services:
+  horoscopebot:
+    image: 'horoscopebot:latest'
+    container_name: horoscopebot
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports: 
+      - '8081:8081'
+    networks:
+      - proxy_manager
+
+
+networks:
+  proxy_manager:
+    name: proxy_manager
