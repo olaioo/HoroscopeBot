@@ -18,7 +18,7 @@ def get_percentage(fname, sname):
 
 def get_sign(date):
     inner_date = datetime.fromisoformat(date)
-    month = inner_date.month * 100
+    month = (inner_date.month * 100) + inner_date.day
     if month < 120 :
         return 'Capricorn'
     elif month < 219 :
