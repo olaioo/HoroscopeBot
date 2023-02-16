@@ -44,4 +44,4 @@ def get_sign(date):
     elif month < 1222 :
         return 'Sagittarius'
     else :
-        return None
+        return 'Mystery'
