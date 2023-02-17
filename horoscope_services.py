@@ -3,13 +3,14 @@ import os
 
 from datetime import datetime
 
-base_url_horoscope = 'http://horoscope-api.herokuapp.com'
+base_url_horoscope = 'https://horoscope-astrology.p.rapidapi.com'
 base_url_lovecalculator = 'https://love-calculator.p.rapidapi.com'
 
 key_rapidapi = os.environ.get('RAPIDAPI_KEY')
 
 def get_horoscope(sign, scope):
-    response = requests.get(base_url_horoscope + '/horoscope/'+ scope+ '/' + sign).json()
+    response = requests.get(base_url_horoscope + '/horoscope', {'day': scope, 'sunsign': sign}, headers={'x-rapidapi-key': key_rapidapi}).json()
+    print(response)
     return response['horoscope']
 
 def get_percentage(fname, sname):
@@ -44,4 +45,4 @@ def get_sign(date):
     elif month < 1222 :
         return 'Sagittarius'
     else :
-        return 'Mystery'
+        return 'Capricorn'
