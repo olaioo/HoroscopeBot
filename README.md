@@ -16,18 +16,17 @@ Requisitos necessários para efetuar a instalação são:
 
 * Possuir os serviços da IBM: Watson Assistant, Watson SpeechToText e Watson TextToSpeech
 * Bot no Telegram
-* Conta no Heroku
 * Conta no RapidAPI
 
 
 Carregue a skill para o Watson Assistant localizada na raíz do projeto com o nome 'skill-HoroscopoChatBot.json', em seguida defina ela como skill padrão. 
 
 
-Para a aplicação, basta clonar ou realizar um fork do repositório e conectar sua conta do github no heroku, adicionar as configurações da seção abaixo e em seguida realizar o deploy da aplicação no próprio heroku.
+Para a aplicação, basta clonar ou realizar um fork do repositório, adicionar as configurações da seção abaixo e em seguida rodar o Dockerfile e o docker-compose.yml.
 
 ## Configurações
 
-A seguir as variáveis que devem ser configuradas no Heroku:
+A seguir as variáveis de ambiente que devem ser configuradas no servidor:
 
 * WATSON_ASSISTANT_TOKEN: token IAM do Watson Assistant
 * WATSON_ASSISTANT_URL: URL do Watson Assistant
@@ -37,7 +36,7 @@ A seguir as variáveis que devem ser configuradas no Heroku:
 * T2S_TOKEN: token IAM da API Watson TextToSpeech
 * T2S_URL: URL da API Watson TExtToSpeech
 * TELEGRAM_BOT_TOKEN: token do bot criado no Telegram
-* TELEGRAM_WEBHOOK: url da aplicação do heroku (https://\<appname\>.herokuapp.com)
+* TELEGRAM_WEBHOOK: url da aplicação
 * RAPIDAPI_KEY: token para acessar as API's lovecalculator e zodiacsign, adquirido em (https://rapidapi.com/)
 
 ## Demonstração
@@ -47,7 +46,7 @@ O HoroscopeBot está online e pode ser acessado pelo telegram, basta adicioná-l
 Exemplos de perguntas:
 
 * Quero descobrir o meu signo, nasci em 05/06/1998.
-* Qual é o horoscopo diário para peixes?
+* Qual é o horoscopo semanal para peixes?
 * Quero saber a afinidade entre duas pessoas
-  * João
+  * Alberto
   * Maria
